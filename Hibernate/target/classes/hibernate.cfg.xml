@@ -16,5 +16,6 @@
 		<property name="hbm2ddl.auto">update</property>
 		<!-- to see which query hibernate made itself and fired it -->
 		<property name="show_sql">true</property>
+		<mapping class="com.hibernate.Student"/>
 	</session-factory>
 </hibernate-configuration>
