@@ -1,5 +1,9 @@
 package com.hibernate;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.sql.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,7 +14,7 @@ import org.hibernate.cfg.Configuration;
  *
  */
 public class App {
-    public static void main( String[] args) {
+    public static void main( String[] args) throws IOException {
         System.out.println("Hibernate started....");
         // This is a type of connection as like in JDBC
 //        SessionFactory factory = new Configuration().configure().buildSessionFactory();
@@ -30,7 +34,27 @@ public class App {
         student.setName("Mohan");
         student.setCity("Delhi");
         
+        
         System.out.println(student);
+        
+        
+        
+//        Creating Address Object Here
+        
+        Address addressMohan = new Address();
+        addressMohan.setAddedDate(new Date(2022, 02, 10));
+        addressMohan.setCity("Delhi");
+        
+        addressMohan.setOpen(true);
+        addressMohan.setStreet("street no 20");
+        addressMohan.setX(22.44);
+        
+        // First Read Image
+        FileInputStream fileInputStream = new FileInputStream("src/main/java/pic.jpeg");
+        byte[] image = new byte[fileInputStream.available()];
+        fileInputStream.read(image);
+        addressMohan.setImage(image);
+        
         
         // How to save our student into the database
         
@@ -40,9 +64,14 @@ public class App {
         // we can use this persist
 //        session.persist(student);
         
+        session.save(addressMohan);
+        System.out.println("Saved Mohan");
+        
         transaction.commit();
         
         session.close();
+        
+        System.out.println("Added..");
         
     }
 }
