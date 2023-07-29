@@ -158,3 +158,36 @@ public class Address {
 saved in this Hibernate name folder inside src/main/java/com.hibernate and class name is EmDemo.java
 Take a refernce and it will be easy to understand
 </pre>
+
+<hr>
+<b>One to One Relation</b><br>
+example:- 
+<br>
+one student can have one enrollment number.
+<br>
+one repo have one readme.md
+<br>
+This is called one to one relation
+<br>
+<pre>
+<code>
+@Entity
+class Question {
+	@Id
+	private int qId;
+	private String question;
+	@OneToOne
+	private Answer answer;
+}
+@Entity
+class Answer {
+	@Id
+	private int aId;
+	private String answer;
+}
+</code>
+</pre>
+<b>Note That this is unidirectional we are only going from Question to Answer but we can't go to Answer to Question</b>
+<br>
+
+<hr>
