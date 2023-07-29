@@ -30,9 +30,9 @@ public class App {
         
         // creating student
         Student student = new Student();
-        student.setId(102);
-        student.setName("Mohan");
-        student.setCity("Delhi");
+        student.setId(105);
+        student.setName("Ashish");
+        student.setCity("Lucknow");
         
         
         System.out.println(student);
@@ -64,7 +64,7 @@ public class App {
         // we can use this persist
 //        session.persist(student);
         
-        session.save(addressMohan);
+//        session.save(addressMohan);
         System.out.println("Saved Mohan");
         
         transaction.commit();

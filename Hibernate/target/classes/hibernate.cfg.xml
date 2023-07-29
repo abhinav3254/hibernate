@@ -13,7 +13,7 @@
 		<property name="connection.password">root3254</property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<!-- hibernate itself is going to create the table -->
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		<!-- to see which query hibernate made itself and fired it -->
 		<property name="show_sql">true</property>
 		<mapping class="com.hibernate.Student"/>
