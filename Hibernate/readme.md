@@ -132,3 +132,29 @@ Means that if we don't use the object then our hibernate won't fire the query. <
 <br>
 This is the major difference between the get() and load() method
 <hr>
+<b>Embedded annotation in hibernate</b>
+<pre>
+<code>
+@Entity
+public class Employee {
+	@Id
+	private int id;
+	private String name;
+	@Embedded
+	private Address address;
+	
+}
+// Here address is a class
+
+@Embeddable
+public class Address {
+	private String street;
+	private String city;
+	private String state;
+	private String zip;
+	// getters and setters
+}
+</code>
+saved in this Hibernate name folder inside src/main/java/com.hibernate and class name is EmDemo.java
+Take a refernce and it will be easy to understand
+</pre>
