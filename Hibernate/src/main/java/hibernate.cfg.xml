@@ -21,8 +21,10 @@
 		<mapping class="com.hibernate.Address"/>
 		<mapping class="com.onetoone.Question"/>
 		<mapping class="com.onetoone.Answer"/>
-		 -->
 		<mapping class="onetomany.Question"/>
 		<mapping class="onetomany.Answer"/>
+		-->
+		<mapping class = "com.manytomany.Employee"/>
+		<mapping class = "com.manytomany.Project"/>
 	</session-factory>
 </hibernate-configuration>
