@@ -191,3 +191,21 @@ class Answer {
 <br>
 
 <hr>
+
+<b>Fetch Type</b>
+1. Lazy
+2. Eager
+
+<table border=10>
+<tr>
+<th>Lazy</th>
+<th>Eager</th>
+</tr>
+<tr>
+<td>In lazy loading associated data loads only when we explicitly call getter or size method</td>
+<td>It is a design pattern in which data loading occurs on the spot</td>
+</tr>
+
+</table>
+
+<hr>
